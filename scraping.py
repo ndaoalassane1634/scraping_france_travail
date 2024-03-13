@@ -31,3 +31,7 @@ for france_travail in france_travails :
 
     france_travail.find('p', class_="contrat visible-xs").text
     type_contrat_clean.append(france_travail.find('p', class_="contrat visible-xs").text)
+
+#ajout dataFrame
+df = pd.DataFrame({"Poste" : titles_clean , "Entreprise" : adress_clean , "Description" : description_clean, "Contrat" : type_contrat_clean})
+df
