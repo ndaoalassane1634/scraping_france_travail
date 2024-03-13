@@ -17,3 +17,17 @@ titles_clean = []
 adress_clean = []
 description_clean = []
 type_contrat_clean  = []
+
+#CREATION DES BOUCLES
+for france_travail in france_travails :
+    france_travail.find("span", class_="media-heading-title").text
+    titles_clean.append(france_travail.find("span", class_="media-heading-title").text)
+
+    france_travail.find('p', class_="subtext").find("span").text
+    adress_clean.append(france_travail.find('p', class_="subtext").find("span").text)
+
+    france_travail.find('p', class_="description").text
+    description_clean.append(france_travail.find('p' , class_="description").text)
+
+    france_travail.find('p', class_="contrat visible-xs").text
+    type_contrat_clean.append(france_travail.find('p', class_="contrat visible-xs").text)
